@@ -4,6 +4,7 @@
     "type": "library",
     "license": "MIT",
     "require": {
+        "php": ">=7.1",
         "php-di/php-di": "6.0"
     },
     "authors": [
@@ -12,5 +13,16 @@
             "email": "jinbonjour@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "bonjour\\": "src/"
+        }
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    },
     "minimum-stability": "stable"
 }
