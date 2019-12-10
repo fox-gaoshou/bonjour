@@ -1,0 +1,16 @@
+{
+    "name": "fox-gaoshou/bonjour",
+    "description" : "For developing web app quickly.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php-di/php-di": "6.0"
+    },
+    "authors": [
+        {
+            "name": "fox-gaoshou",
+            "email": "jinbonjour@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
