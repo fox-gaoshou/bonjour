@@ -23,6 +23,5 @@
             "type": "composer",
             "url": "https://packagist.phpcomposer.com"
         }
-    },
-    "minimum-stability": "stable"
+    }
 }
