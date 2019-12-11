@@ -14,7 +14,6 @@ use bonjour\core\bonjour;
 
 class controller
 {
-    public static $conf;
     public $session;
     public $terminal_type;
     private function enable($val)
@@ -25,7 +24,7 @@ class controller
     }
     public function __construct()
     {
-        $conf = self::$conf;
+        $conf = bonjour::$conf->get_config('controller.ini');
         if(is_array($conf) == false) return;
 
         // 设置请求头

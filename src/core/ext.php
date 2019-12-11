@@ -20,7 +20,6 @@ namespace bonjour\core;
  * @property \bonjour\extend\network        $network
  * @property \bonjour\extend\redis_task     $redis_task
  * @property \bonjour\extend\session        $session
- * @property \bonjour\extend\file_manager   $file_manager
  * */
 class ext
 {

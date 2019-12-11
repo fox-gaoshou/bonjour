@@ -13,14 +13,13 @@ use bonjour\core\bonjour;
 
 class order
 {
-    private $machineNumber = 0;
+    private $machine_number = 0;
     public function __construct()
     {
-        $this->machineNumber = 0;
-        $this->machineNumber = bonjour::$conf->machine('number');
+        $this->machine_number = bonjour::$evn->machine_number;
     }
-    public function d15()
+    public function gen()
     {
-        return brOrderNo($this->machineNumber);
+        return bonjour_order_no($this->machine_number);
     }
 }

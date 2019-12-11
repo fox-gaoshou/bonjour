@@ -19,7 +19,7 @@ class lib_ip
     {
         try
         {
-            $ipip = new \ipip\datx\City(bonjour::$evn->dir_lib . '/ipip/17monipdb.datx');
+            $ipip = new \ipip\datx\City(__DIR__ . '/ipip/17monipdb.datx');
             $IPDistrict = $ipip->find($ip);
             return new res(0,'',$IPDistrict);
         }catch (\Exception $e)

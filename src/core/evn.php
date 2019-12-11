@@ -15,6 +15,7 @@ namespace bonjour\core;
  *
  * @property string     $root
  * @property int        $start_time
+ * @property int        $machine_number
  * @property string     $dir_config
  * @property string     $dir_log
  * @property string     $dir_lib
@@ -39,19 +40,19 @@ class evn
     public $core;
     public $common;
 
+    public $machine_number = 0;
+
     public function __construct(string $root)
     {
         $this->root =               $root;
         $this->start_time =         time();
+        $this->machine_number =     BON_MACHINE_NUMBER;
 
-        $this->dir_config =         $this->root . '/config';
-        $this->dir_lib =            $this->root . '/lib';
-        $this->dir_traits =         $this->root . '/traits';
-        $this->dir_log =            $this->root . '/../runtime/bonjour/log';
-        $this->dir_data =           $this->root . '/../runtime/bonjour/data';
+        $this->dir_lib =            __DIR__ . "/../lib";
+        $this->dir_traits =         __DIR__ . "/../traits";
 
-        $this->core =               include $this->dir_config . '/core.php';
-        $this->app =                include $this->dir_config . '/app.php';
-        $this->common =             include $this->dir_config . '/common.php';
+        $this->dir_config =         BON_DIR_CONFIG;
+        $this->dir_log =            BON_DIR_LOG;
+        $this->dir_data =           BON_DIR_DATA;
     }
 }

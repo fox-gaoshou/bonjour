@@ -10,8 +10,8 @@ namespace bonjour\core;
 
 
 use bonjour\format\mysql\prepare;
-use bonjour\format\res\res;
 use bonjour\format\res\res_mysql;
+
 
 define('status_of_transaction_nothing',             0);
 define('status_of_transaction_begin_success',       1);
